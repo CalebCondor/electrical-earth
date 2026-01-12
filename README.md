@@ -26,6 +26,6 @@ Puedes usar el gestor de paquetes con el que te sientas más cómodo (como npm, 
 
 La transformación de los datos es muy sencilla y directa:
 
-El JSON actúa como un archivador ya organizado. Las **claves** principales son los nombres de las categorías (ej: "Exámenes"), y dentro de cada una vive su **lista de productos**.
+El JSON actúa como un archivador ya organizado. Las **claves** principales son los nombres de las categorías, y dentro de cada una vive su **lista de productos**
 La app simplemente lee estas claves para crear el menú de pestañas automáticamente.
 Cuando seleccionas una pestaña, la app usa ese nombre para acceder directamente a su lista de items correspondiente, sin tener que filtrar o buscar por todo el catálogo desordenado.
