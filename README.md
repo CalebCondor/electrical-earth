@@ -1,46 +1,31 @@
-# Astro Starter Kit: Basics
+# Electrical Earth Catalog
 
-```sh
-npm create astro@latest -- --template basics
-```
+¡Hola! Este es un catálogo interactivo de servicios médicos que construimos utilizando **Astro** y **React**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Cómo verlo en tu computadora
 
-## 🚀 Project Structure
+Puedes usar el gestor de paquetes con el que te sientas más cómodo (como npm, bun, etc.). Aquí tienes los pasos generales:
 
-Inside of your Astro project, you'll see the following folders and files:
+1.  **Instala las dependencias**:
+    Ejecuta el comando de instalación en tu terminal para descargar las librerías necesarias.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+    ```bash
+    npm install
+    # o bun install
+    ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+2.  **Inicia el proyecto**:
+    Enciende el servidor local para ver la web.
+    ```bash
+    npm run dev
+    # o bun run dev
+    ```
+    Abre el enlace que aparece en la terminal (usualmente `http://localhost:4321`) y listo.
 
-## 🧞 Commands
+## 🔄 Sobre la estructura de datos
 
-All commands are run from the root of the project, from a terminal:
+La transformación de los datos es muy sencilla y directa:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+El JSON actúa como un archivador ya organizado. Las **claves** principales son los nombres de las categorías (ej: "Exámenes"), y dentro de cada una vive su **lista de productos**.
+La app simplemente lee estas claves para crear el menú de pestañas automáticamente.
+Cuando seleccionas una pestaña, la app usa ese nombre para acceder directamente a su lista de items correspondiente, sin tener que filtrar o buscar por todo el catálogo desordenado.
